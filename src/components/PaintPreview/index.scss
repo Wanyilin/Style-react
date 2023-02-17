@@ -1,0 +1,15 @@
+@import 'src/theme.scss';
+
+.paint-preview {
+	display: flex;
+	align-items: center;
+	
+	.color-box {
+		@include ColorImgPreviewBox;
+		margin-right: 4px;
+	}
+	
+	.item-content {
+		@include FontStyle($ItemContentSize, $ItemContentWeight, $MainFontColor)
+	}
+}

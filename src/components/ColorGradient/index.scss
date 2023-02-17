@@ -1,0 +1,67 @@
+@import 'src/theme.scss';
+
+@mixin circle {
+	width: 6px;
+	height: 6px;
+	border: 1px solid #fff;
+	border-radius: 50%;
+}
+
+
+.gradient {
+	margin-bottom: $ListItemMargin;
+	padding-left: 3px;
+
+	.color-position {
+		display: flex;
+    color: #fff;
+    align-items: center;
+    height: 28px;
+
+		
+		.circle {
+			@include circle;
+			
+			&::before {
+				height: 19px;
+				border-left: 1px solid rgba(255, 255, 255, 0.4);
+				margin-left: 2.5px;
+				content: '';
+				display: block;
+				position: relative;
+				top: 8px;
+			}
+		}
+
+		&:last-child {
+			.circle::before {
+				content: unset;
+			}
+		}
+
+		.position {
+			width: 32px;
+			margin: 0 8px;
+		}
+
+		.color-display, .position {
+			@include FontStyle($ItemContentSize, $ItemTitleWeight, $MainFontColor);
+			letter-spacing: 0.01em;
+		}
+		
+		.color-display {
+			display: flex;
+			align-items: center;
+			margin-left: 8px;
+		}
+
+		.hex-text {
+			margin: 0 4px;
+		}
+
+		.color-box {
+			@include ColorImgPreviewBox
+		}
+		
+	}
+}

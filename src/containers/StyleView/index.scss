@@ -1,0 +1,45 @@
+@import 'src/theme';
+
+.style-view {
+	width: 216px;
+	background: #101011;
+	padding: $MainPadding;
+
+	.style-list {
+		@include BorderButtomLine(solid);
+		padding-bottom: $BoxPadding;
+		margin-bottom: $BoxMargin;
+	}
+	.style-list:last-child {
+		border-bottom: 0;
+		padding-bottom: 0;
+		margin-bottom: 0;
+	}
+	.category-title {
+		@include FontStyle($CategoryTitleSize, $CategoryTitleWeight, $MainFontColor);
+		letter-spacing: 0.01em;
+		margin-bottom: $ListItemMargin;
+	}
+	.style-list-group {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.style-list-group:last-child {
+		margin-bottom: 0;
+
+		&::after {
+			content: none;
+		}
+	}
+
+	.style-list-group::after {
+		align-self: center;
+    width: 200px;
+    margin: $BoxMargin 0;
+    display: block;
+    content: '';
+    border-bottom: 1px #45454F dashed;
+		@include BorderButtomLine(dashed)
+	}
+}
