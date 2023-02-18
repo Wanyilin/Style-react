@@ -34,5 +34,11 @@ describe('Test formatter', () => {
 
 		const result = convertCamel(camelStr);
 		expect(result).toEqual(expectRes);
+	});
+	test('Should return value directly if not string', () => {
+		const noString = 123;
+		const expecRes = 123;
+		const result = convertCamel(noString);
+		expect(result).toEqual(expecRes);
 	})
 });

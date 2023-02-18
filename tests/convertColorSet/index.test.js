@@ -9,7 +9,7 @@ const { rgbaToHex } = require('hex-and-rgba/esm');
 
 describe('Test ConverColorSet', () => {
 	rgbaToHex.mockImplementation((data) => data.join(''));
-	test('should convert array of rgba to hex color set', () => {
+	test('should convert array to expect object', () => {
 		const rgbaList = [
 			{
 				color: [1, 1, 1, 0.3],
@@ -33,6 +33,7 @@ describe('Test ConverColorSet', () => {
 				alpha: '10%',
 			}
 		];
+
 
 		const result = convertColorSet(rgbaList);
 		expect(result).toEqual(expectRes);

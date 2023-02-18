@@ -5,5 +5,10 @@ module.exports = {
 		"<rootDir>/build/",
 		"<rootDir>/node_modules/",
 	],
+	moduleNameMapper: {
+		'.*\\.(css|scss|sass)$': '<rootDir>/tests/cssModule.js',
+	},
+	setupFilesAfterEnv: [`<rootDir>/tests/jest.setup.js`],
+	testEnvironment: 'jsdom',
   moduleFileExtensions: ["js", "jsx"]
 }

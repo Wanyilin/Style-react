@@ -26,7 +26,7 @@ const PaintPreview = ({
       )`;
   }
   if (type === STYLE_VALUE_TYPE.SOLID) {
-    const { hexText } = rgbaToHexObj(value)
+    const { hexText } = rgbaToHexObj(value);
     displayText = hexText;
     background = hexText;
   }

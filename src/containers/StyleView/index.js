@@ -5,10 +5,10 @@ import { stylesList } from './mock';
 import './index.scss';
 
 const stylesListGroup = groups => (
-	groups.map(stylesList => (
+	groups.map((stylesList, index) => (
 		<StylesList
 			className="style-list-group"
-			key={stylesList}
+			key={`list-${index}`}
 			stylesList={stylesList}
 		/>
 	))

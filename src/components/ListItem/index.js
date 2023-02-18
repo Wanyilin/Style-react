@@ -4,11 +4,12 @@ import { convertCamel, formatter } from 'src/utils/formatter';
 import './index.scss';
 
 const ListItem = ({
-	item
+	type,
+	value,
+	name,
 }) => {
-	const { name } = item;
 	const title = convertCamel(name);
-	const content = formatter(item);
+	const content = formatter({ type, value, name });
 	return (
 		<div className="list-item">
 			<span className="item-title">{title}</span>

@@ -97,9 +97,6 @@ const formatter = ({
 		case ABBREVIATION.textDirection:
 			formattedValue = ABB_VALUE_MAP[value] ?? value;
 			break;
-		case UNIT.fontSize:
-			formattedValue = `${value}${unit}`;
-			break;
 		case ROTATION.rotation:
 			formattedValue = toRoatation(value);
 			break;

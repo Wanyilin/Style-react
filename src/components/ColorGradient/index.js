@@ -14,15 +14,16 @@ const PositionSpot = ({ hexText, alpha, position }) => (
 			<span>{ alpha }</span>
 		</div>
 	</div>
-)
+);
 
 const ColorGradient = ({
-	item,
+	name,
+	value,
+	type,
 }) => {
-	const { name, value, type } = item;
-	const colorSet = convertColorSet(value);
-	const paintValue = [...colorSet];
-	const firstColor = colorSet.shift();
+	const colorsSet = convertColorSet(value);
+	const paintValue = [...colorsSet];
+	const firstColor = colorsSet.shift();
 	return (
 		<>
 			<PaintPreview type={type} value={paintValue} name={name} />
@@ -32,11 +33,11 @@ const ColorGradient = ({
 					alpha={firstColor.alpha}
 					position={firstColor.position}
 				/>
-				{colorSet.map(({ hexText, alpha, position }) => (
-					<>
+				{colorsSet.map((colorSet) => (
+					<div key={`${colorSet.hexText}-set`}>
 						<div className="line" />
-						<PositionSpot hexText={hexText} alpha={alpha} position={position}/>
-					</>
+						<PositionSpot hexText={colorSet.hexText} alpha={colorSet.alpha} position={colorSet.position}/>
+					</div>
 				))}
 			</div>
 		</>

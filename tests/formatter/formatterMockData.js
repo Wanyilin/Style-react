@@ -1,7 +1,7 @@
 const formatterMockData = [
 	{
 		name: 'lineHeight',
-		value: 1,
+		value: 'test',
 		type: 'percentage',
 	}, {
 		name: 'paragraphSpacing',
@@ -25,8 +25,7 @@ const formatterMockData = [
 		type: 'default',
 	}, {
 		name: 'fontSize',
-		value: 1123,
-		unit: 'em',
+		value: '1123em',
 		type: 'default',
 	}, {
 		name: 'rotation',
@@ -56,7 +55,7 @@ const formatterMockData = [
 ];
 
 const expectPercentageRes = [
-	'100%',
+	'test',
 	'20%',
 	'0%',
 ];

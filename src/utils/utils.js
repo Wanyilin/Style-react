@@ -18,7 +18,7 @@ const rgbaToHexObj = (rgba, position) => {
 }
 
 const convertColorSet = value => {
-	const colorSet = value.map(item => {
+	const colorsSet = value.map(item => {
 		const { color, position } = item;
 		const hexObj = rgbaToHexObj(color, position);
 		return {
@@ -26,7 +26,7 @@ const convertColorSet = value => {
 			...hexObj,
 		}
 	});
-	return colorSet;
+	return colorsSet;
 };
 
 export { convertColorSet, rgbaToHexObj };

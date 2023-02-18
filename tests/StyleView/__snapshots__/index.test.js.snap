@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StyleView Should match snapshop 1`] = `
+<div
+  className="style-view"
+>
+  <div
+    className="style-list"
+  >
+    <div
+      className="category-title"
+    >
+      Font
+    </div>
+    Styles List
+  </div>
+  <div
+    className="style-list"
+  >
+    <div
+      className="category-title"
+    >
+      Fills
+    </div>
+    Styles List
+    Styles List
+    Styles List
+  </div>
+  <div
+    className="style-list"
+  >
+    <div
+      className="category-title"
+    >
+      Strokes
+    </div>
+    Styles List
+    Styles List
+  </div>
+</div>
+`;
+
+exports[`StyleView Should match snapshot 1`] = `
+<div
+  className="style-view"
+>
+  <div
+    className="style-list"
+  >
+    <div
+      className="category-title"
+    >
+      Font
+    </div>
+    Styles List
+  </div>
+  <div
+    className="style-list"
+  >
+    <div
+      className="category-title"
+    >
+      Fills
+    </div>
+    Styles List
+    Styles List
+    Styles List
+  </div>
+  <div
+    className="style-list"
+  >
+    <div
+      className="category-title"
+    >
+      Strokes
+    </div>
+    Styles List
+    Styles List
+  </div>
+</div>
+`;

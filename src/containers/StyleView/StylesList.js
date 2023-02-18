@@ -5,16 +5,15 @@ import PaintPreview from 'src/components/PaintPreview';
 import { STYLE_VALUE_TYPE } from 'src/utils/constants';
 import { mapStyleItems } from './utils';
 
-const ItemComponent = (item) => {
-	const { type, value, name } = item;
+const ItemComponent = ({ type, value, name }) => {
 	switch (type) {
 		case STYLE_VALUE_TYPE.GRADIENT:
-			return <ColorGradient item={item} />;
+			return <ColorGradient key={`${name}-${value}`} type={type} value={value} name={name} />;
 		case STYLE_VALUE_TYPE.IMAGE:
 		case STYLE_VALUE_TYPE.SOLID:
-			return <PaintPreview type={type} value={value} name={name} />;
+			return <PaintPreview key={`${name}-${value}`} type={type} value={value} name={name} />;
 		default:
-			return <ListItem item={item} />
+			return <ListItem key={`${name}-${value}`} type={type} value={value} name={name} />
 	}
 }
 

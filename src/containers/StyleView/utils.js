@@ -9,6 +9,13 @@ import {
 
 const mapStyleItems = (list) => {
 	const mapStyles = Object.keys(list).map(styleName => {
+		if (styleName === FONT_OBJ.FONT_SIZE) {
+			return  ({
+				name: styleName,
+				value: `${list[styleName]}${list[FONT_OBJ.FONT_UNIT]}`,
+				tyep: STYLE_VALUE_TYPE.STRING,
+			});
+		}
 		switch (list[styleName]) {
 			case STYLE_VALUE_TYPE.GRADIENT:
 				return ({
@@ -27,13 +34,6 @@ const mapStyleItems = (list) => {
 					name: '',
 					value: list.color,
 					type: STYLE_VALUE_TYPE.SOLID,
-				})
-			case FONT_OBJ.FONT_SIZE:
-				return ({
-					name: styleName,
-					value: list[styleName],
-					unit: list[FONT_OBJ.FONT_UNIT],
-					tyep: STYLE_VALUE_TYPE.STRING,
 				})
 			default:
 				return ({
