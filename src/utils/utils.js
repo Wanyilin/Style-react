@@ -1,8 +1,7 @@
 import { rgbaToHex } from 'hex-and-rgba/esm';
-import { toPercentage } from 'src/utils/formatter';
+import { toPercentage, toRgbNum } from 'src/utils/formatter';
 
 const rgbaToHexObj = (rgba, position) => {
-	const toRgbNum = num => Math.round(num * 255);
 	const rgbColor = [];
 		// convert float to rgb number
 		for (let i = 0; i < 3; i++) {

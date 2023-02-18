@@ -65,8 +65,13 @@ const toRoatation = value => {
 	if (isNaN(value)) return value;
 	if (value === 0) return '0º';
 	return `${Math.round(value * 180 / Math.PI)}º`;
-}
+};
 
+const toRgbNum = value => {
+	if (isNaN(value)) return '';
+	if (value === 0) return 0;
+	return Math.round(value * 255);
+}
 const formatter = ({
 	name,
 	value,
@@ -105,4 +110,4 @@ const formatter = ({
 	return formattedValue;
 }
 
-export { formatter, convertCamel, toPercentage }
+export { formatter, convertCamel, toPercentage, toRgbNum }
