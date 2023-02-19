@@ -12,7 +12,7 @@
 	margin-bottom: $ListItemMargin;
 	padding-left: 3px;
 
-	.color-position {
+	.color-position-spot {
 		display: flex;
     color: #fff;
     align-items: center;
@@ -55,12 +55,9 @@
 			margin-left: 8px;
 		}
 
-		.hex-text {
-			margin: 0 4px;
-		}
-
-		.color-box {
-			@include ColorImgPreviewBox
+		.paint-preview {
+			margin-bottom: 0;
+			margin-right: 4px;
 		}
 		
 	}

@@ -1,34 +1,10 @@
-const PERCENTAGE = {
-	lineHeight: 'lineHeight',
-	paragraphSpacing: 'paragraphSpacing',
-	characterSpacing: 'characterSpacing',
-	wordSpacing: 'wordSpacing',
-	paragraphIndent: 'paragraphIndent',
-	opacity: 'opacity',
-	offset: 'offset',
-};
-
-const PX = {
-	x: 'x',
-	y: 'y',
-	width: 'width',
-	height: 'height',
-};
-const UNIT = {
-	fontSize: 'fontSize'
-};
-const ABBREVIATION = {
-	textDirection: 'textDirection'
-};
-
-const ABB_VALUE_MAP = {
-	RTL: 'Right to Left',
-	LTR: 'Left to Right',
-};
-
-const ROTATION = {
-	rotation: 'rotation'
-}
+import {
+	PERCENTAGE,
+	PX,
+	ABBREVIATION,
+	ABB_VALUE_MAP,
+	ROTATION
+} from './constants';
 
 const firstCharUpperCase = str => {
 	const strSplit = str.split(' ');

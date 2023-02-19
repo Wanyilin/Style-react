@@ -1,20 +1,27 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { convertColorSet } from 'src/utils/utils';
+import { STYLE_VALUE_TYPE } from 'src/utils/constants';
 import PaintPreview from 'src/components/PaintPreview';
 
 import './index.scss';
 
-const PositionSpot = ({ hexText, alpha, position }) => (
-	<div className="color-position">
+const PositionSpot = ({ position, hexText, alpha }) => (
+	<div className="color-position-spot">
 		<div className="circle" />
 		<div className="position">{ position }</div>
 		<div className="color-display">
-			<span className="color-box" style={{ background: `${hexText}` }} />
-			<span className="hex-text">{ hexText }</span>
+			<PaintPreview type={STYLE_VALUE_TYPE.SOLID} value={hexText} />
 			<span>{ alpha }</span>
 		</div>
 	</div>
 );
+
+const ColorSet = (({ hexText, alpha, position }) => (
+	<Fragment key={`${hexText}-set`}>
+		<div className="line" />
+		<PositionSpot hexText={hexText} alpha={alpha} position={position}/>
+	</Fragment>
+));
 
 const ColorGradient = ({
 	name,
@@ -22,25 +29,20 @@ const ColorGradient = ({
 	type,
 }) => {
 	const colorsSet = convertColorSet(value);
-	const paintValue = [...colorsSet];
+	const paintValues = [...colorsSet];
 	const firstColor = colorsSet.shift();
 	return (
-		<>
-			<PaintPreview type={type} value={paintValue} name={name} />
+		<Fragment>
+			<PaintPreview type={type} value={paintValues} name={name} />
 			<div className="gradient">
 				<PositionSpot
 					hexText={firstColor.hexText}
 					alpha={firstColor.alpha}
 					position={firstColor.position}
 				/>
-				{colorsSet.map((colorSet) => (
-					<div key={`${colorSet.hexText}-set`}>
-						<div className="line" />
-						<PositionSpot hexText={colorSet.hexText} alpha={colorSet.alpha} position={colorSet.position}/>
-					</div>
-				))}
+				{colorsSet.map(ColorSet)}
 			</div>
-		</>
+		</Fragment>
 	)
 }
 

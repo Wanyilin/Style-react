@@ -19,13 +19,14 @@
   "bugs": {
     "url": "https://github.com/Wanyilin/Style-react/issues"
   },
-  "homepage": "https://github.com/Wanyilin/Style-react#readme",
+  "homepage": "https://wanyilin.github.io/Style-react",
   "dependencies": {
     "@fontsource/inter": "^4.5.15",
     "gh-pages": "^5.0.0",
     "hex-and-rgba": "^2.0.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "styled-components": "^5.3.6"
   },
   "devDependencies": {
     "@babel/core": "^7.20.12",

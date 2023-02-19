@@ -32,10 +32,45 @@ const EXCLUD_LIST = [
 	GRADIENT_OBJ.GradientType,
 ];
 
+const PERCENTAGE = {
+	lineHeight: 'lineHeight',
+	paragraphSpacing: 'paragraphSpacing',
+	characterSpacing: 'characterSpacing',
+	wordSpacing: 'wordSpacing',
+	paragraphIndent: 'paragraphIndent',
+	opacity: 'opacity',
+	offset: 'offset',
+};
+
+const PX = {
+	x: 'x',
+	y: 'y',
+	width: 'width',
+	height: 'height',
+};
+
+const ABBREVIATION = {
+	textDirection: 'textDirection'
+};
+
+const ABB_VALUE_MAP = {
+	RTL: 'Right to Left',
+	LTR: 'Left to Right',
+};
+
+const ROTATION = {
+	rotation: 'rotation'
+};
+
 export {
 	GRADIENT_OBJ,
 	GRADIENT_TYPE,
 	STYLE_VALUE_TYPE,
 	FONT_OBJ,
 	EXCLUD_LIST,
+	PERCENTAGE,
+	PX,
+	ABBREVIATION,
+	ABB_VALUE_MAP,
+	ROTATION
 };
