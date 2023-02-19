@@ -9,7 +9,7 @@ import {
 
 const mapStyleItems = (list) => {
 	const mapStyles = Object.keys(list).map(styleName => {
-		if (styleName === FONT_OBJ.FONT_SIZE) {
+		if (styleName === FONT_OBJ.FONT_SIZE && list[FONT_OBJ.FONT_UNIT]) {
 			return  ({
 				name: styleName,
 				value: `${list[styleName]}${list[FONT_OBJ.FONT_UNIT]}`,

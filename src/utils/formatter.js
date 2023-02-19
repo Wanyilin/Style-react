@@ -9,11 +9,8 @@ import {
 const firstCharUpperCase = str => {
 	const strSplit = str.split(' ');
 	const finalStr = strSplit.reduce((acc, curr) => {
-		let string = acc;
-		let words = curr.split('');
-		words[0] = words[0].toUpperCase();
-		string = string.length ? `${string} ${words.join('')}` : words.join('');
-		return string;
+		let words = `${curr[0].toUpperCase()}${curr.slice(1)}`
+		return acc.length ? `${acc} ${words}` : words;;
 	}, '');
 	return finalStr;
 };
@@ -51,7 +48,6 @@ const toRgbNum = value => {
 const formatter = ({
 	name,
 	value,
-	unit = 'px',
 }) => {
 	let formattedValue;
 	switch (name) {
